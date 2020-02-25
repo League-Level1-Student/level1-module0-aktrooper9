@@ -35,9 +35,7 @@ public class Houses {
 	void drawhousie(int height) {
 		
 		rob.move(height);
-		rob.turn(90);
-		rob.move(30);
-		rob.turn(90);
+		drawPointyRoof();
 		rob.move(height);
 		rob.turn(-90);
 		rob.setPenColor(0, 999, 0);
@@ -47,29 +45,35 @@ public class Houses {
 	void drawhousie(String size) {
 		if(size.equals("small")) {
 			drawhousie(60);
+			
 			rob.setPenColor(999, 0, 0);
-			drawPointyRoof();
+			
 		}
 		else if (size.equals("medium")) {
 			drawhousie(120);
+			
 			rob.setPenColor(0, 999, 0);
-			drawPointyRoof();
+		
 		}
 		else if(size.equals("large")){
 			drawhousie(250);
+			
 			rob.setPenColor(0, 0, 999);
-			drawFlatRoof();
+	
 		}
 	}
 	void drawPointyRoof() {
-		rob.turn(45);
-		rob.move(15);
-		rob.turn(45);
-		rob.move(15);
+		rob.turn(60);
+		rob.move(20);
+		rob.turn(60);
+		rob.move(20);
+		rob.turn(60);
 	}
 	void drawFlatRoof() {
 		rob.turn(90);
 		rob.move(30);
+		rob.turn(90);
+		
 	}
 	
 }
