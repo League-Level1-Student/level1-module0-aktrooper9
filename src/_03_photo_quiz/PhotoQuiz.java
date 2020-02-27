@@ -49,16 +49,22 @@ else {
 		// effect of this until step 12)
 quizWindow.remove(pic);
 		// 10. find another image and create it (might take more than one line
-		// of code)
-
-		// 11. add the second image to the quiz window
-
+		// of code) KKKKKEEEEEVVVVIIIINNNN   ^W^
+String newpic= "https://66.media.tumblr.com/3e681b8883783b5250ff7bf38a6ebdbe/tumblr_inline_pjzqmhcggp1rx4yme_500.jpg";
+		Component pict = (createImage(newpic)); 
+// 11. add the second image to the quiz window
+quizWindow.add(pict);
+quizWindow.pack();
 		// 12. pack the quiz window
+String con = JOptionPane.showInputDialog("What Dinosaur is this");
 
-		// 13. ask another question
-
-		// 14+ check answer, say if correct or incorrect, etc.
-
+		// 14 check answer, say if correct or incorrect, etc.
+if(con.equalsIgnoreCase("concavenator corcovatus")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}
+else{
+	JOptionPane.showMessageDialog(null, "WRONG");
+}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
