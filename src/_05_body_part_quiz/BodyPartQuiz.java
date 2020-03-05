@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(50, 50);
 
 		showNextImage();
 
@@ -53,20 +53,60 @@ public class BodyPartQuiz {
 		// 1. Make an int variable to hold the score.
 int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
- window.setSize(1500, 1500);
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if(guess.equalsIgnoreCase("arnold")) {
+	score+=1;
+}
+else{
+	JOptionPane.showMessageDialog(null, "The correct answer  is arnold");
+}JOptionPane.showMessageDialog(null, "your score is "+score);
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
+		String guess2 = JOptionPane.showInputDialog("who is this?");
 
-		// 8. .... repeat 4-7 for all your images.....
+		// 5. Check their answer. If they guessed correctly:
+		// -- Tell them they are right and increase the score by 1
+if(guess2.equalsIgnoreCase("jack")) {
+	score+=1;
+}
+else{
+	JOptionPane.showMessageDialog(null, "The correct answer  is jack");
+}
+JOptionPane.showMessageDialog(null, "your score is "+score);
+showNextImage();
+// 8. .... repeat 4-7 for all your images.....
+String guess3 = JOptionPane.showInputDialog("who is this?");
+
+// 5. Check their answer. If they guessed correctly:
+// -- Tell them they are right and increase the score by 1
+showNextImage();
+if(guess3.equalsIgnoreCase("leonardo")) {
+score+=1;
+}
+else{
+JOptionPane.showMessageDialog(null, "The correct answer  is leonardo");
+
+}
+JOptionPane.showMessageDialog(null, "your score is "+score);
+showNextImage();
+String guess4 = JOptionPane.showInputDialog("who is this?");
+
+// 5. Check their answer. If they guessed correctly:
+// -- Tell them they are right and increase the score by 1
+if(guess.equalsIgnoreCase("morgan")) {
+score+=1;
+}
+else{
+JOptionPane.showMessageDialog(null, "The correct answer  is morgan");
+}
+JOptionPane.showMessageDialog(null, "your final score is "+score);
 
 		// 9. Show them their current score
 
